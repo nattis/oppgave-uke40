@@ -1,19 +1,18 @@
-import type { NextPage } from "next";
-import StaticText from "../components/StaticText";
-import Title from "../components/Title";
-import WeatherDropdown from "../components/WeatherDropdown";
-import WeatherTable from "../components/WeatherTable";
+import type { NextPage } from 'next'
+import StaticText from '../components/StaticText'
+import Title from '../components/Title'
+import WeatherDropdown from '../components/WeatherDropdown'
+import WeatherTable from '../components/WeatherTable'
 
 const Home: NextPage = () => {
   return (
-  <>
-  <Title title={"Velkommen til oversikten over været"}/>
-  <StaticText />
-  <WeatherDropdown />
-  <WeatherTable />
-  </>
+    <>
+      <Title title={'Velkommen til oversikten over været'} />
+      <StaticText />
+      <WeatherDropdown />
+      <WeatherTable />
+    </>
   )
-  
-};
+}
 
-export default Home;
+export default Home
