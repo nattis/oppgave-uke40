@@ -1,6 +1,6 @@
 export default function Form() {
     return (
-        <form>
+        <form className="comment">
             <label htmlFor="name">
                 <input id="name" data-testid="name" type="text" placeholder="Navn"/>
             </label>
