@@ -1,6 +1,11 @@
 import { data as weatherData } from '../data'
+import { Place } from '../types'
 
-export default function WeatherTable() {
+export default function WeatherTable({
+  currentLocation,
+}: {
+  currentLocation: Place
+}) {
   return (
     <section className="weather-table" data-testid="weather-table">
       <h2>Oversikt</h2>
@@ -12,7 +17,9 @@ export default function WeatherTable() {
               <span>{data.weather}</span>
               <span>{data.temperature}</span>
             </div>
-            <button type="button">Velg sted</button>
+            {currentLocation !== data.place.toLowerCase() ? (
+              <button type="button">Velg sted</button>
+            ) : null}
           </li>
         ))}
       </ul>
